@@ -2,7 +2,7 @@
 (function () {
   "use strict";
   var ROOT = document.documentElement.getAttribute("data-root") || "/";
-  function getJSON(u, cb) { fetch(ROOT + "data/" + u).then(function (r) { return r.json(); }).then(cb); }
+  function getJSON(u, cb) { fetch(ROOT + "build/data/" + u).then(function (r) { return r.json(); }).then(cb); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
 
   /* ---------- Eligibility checker ---------- */
