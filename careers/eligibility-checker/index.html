@@ -1,0 +1,9 @@
+---
+layout: default
+title: "Defence Exam Eligibility Checker | DefenceIndia.com"
+description: "Enter your date of birth, qualification and gender to see every Indian Army, Navy, Air Force, Coast Guard and CAPF entry you are eligible for."
+---
+<div class="container"><div class="breadcrumb"><a href="{{ site.baseurl }}/">Home</a> › <a href="{{ site.baseurl }}/careers/">Careers</a> › Eligibility Checker</div><div class="layout"><div><h1>Eligibility Checker</h1><p class="muted">Instant shortlist of every entry you qualify for, with the next cycle date. Then request a free roadmap.</p>
+<form class="tool" id="eligibility-form"><div class="field-row"><div class="field"><label>Date of birth</label><input type="date" name="dob" required></div><div class="field"><label>Gender</label><select name="gender"><option value="M">Male</option><option value="F">Female</option></select></div></div><div class="field-row"><div class="field"><label>Highest qualification (completed or appearing)</label><select name="qual"><option value="5">Class 5–8</option><option value="10">Class 10</option><option value="12" selected>Class 12</option><option value="15">Graduate</option><option value="16">Engineering (BE/BTech)</option><option value="17">LLB / Post-graduate</option></select></div><div class="field"><label>Class 12 stream</label><select name="stream"><option value="pcm">Physics + Maths (PCM)</option><option value="nonpcm">Other stream</option></select></div></div><button class="btn btn-primary" type="submit">Show my entries</button></form>
+<div id="eligibility-result"></div>
+<div id="lead-after-elig" style="display:none;margin-top:26px">{% include lead_form.html %}</div><div class="ad leaderboard" data-slot="leaderboard" aria-label="Advertisement">Advertisement</div></div><aside class="sidebar"><div class="sticky"><div class="ad rect" data-slot="rect" aria-label="Advertisement">Advertisement</div>{% include most_read.html %}</div></aside></div></div>
