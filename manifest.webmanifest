@@ -1,0 +1,3 @@
+---
+---
+{"name": "DefenceIndia.com", "short_name": "DefenceIndia", "start_url": "{{ site.baseurl }}/", "display": "standalone", "background_color": "#0b1f3a", "theme_color": "#0b1f3a", "icons": [{"src": "{{ site.baseurl }}/assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]}
