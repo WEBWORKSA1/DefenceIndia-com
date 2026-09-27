@@ -1,0 +1,6 @@
+title: DefenceIndia.com
+url: https://webworksa1.github.io
+# Project-pages path. For a custom domain (CNAME file), set baseurl to "" and url to https://defenceindia.com
+baseurl: /DefenceIndia-com
+markdown: kramdown
+exclude: [build/build.py, build/pages.py, build/make_og.py, build/jekyll.py, build/content, docs, deploy, dist, site, README.md, PUBLISH.md, .gitignore]
