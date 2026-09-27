@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" data-root="{{ site.baseurl }}/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+<meta property="og:type" content="{{ page.ogtype | default: 'website' }}"><meta property="og:site_name" content="DefenceIndia.com">
+<meta property="og:title" content="{{ page.title }}"><meta property="og:description" content="{{ page.description }}">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}"><meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b1f3a">
+<link rel="icon" href="{{ site.baseurl }}/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ site.baseurl }}/manifest.webmanifest">
+<link rel="alternate" type="application/rss+xml" title="DefenceIndia.com RSS" href="{{ site.baseurl }}/feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+<script>try{var t=localStorage.getItem("di-theme");if(t)document.documentElement.setAttribute("data-theme",t)}catch(e){}</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress"></div>
+<div class="topbar">Contact, if you are interested in this website / domain name / Sponsorship / Advertisement / Partnership — <a href="https://web.works/contact" rel="noopener" target="_blank">web.works/contact</a></div>
+<header class="header"><div class="container">
+<a class="brand" href="{{ site.baseurl }}/" aria-label="DefenceIndia.com home"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#f2801e"/><path d="M24 8l14 7v10c0 9-6 15-14 18-8-3-14-9-14-18V15z" fill="#0b1f3a"/><path d="M24 14l9 4.5V25c0 6-4 10-9 12-5-2-9-6-9-12v-6.5z" fill="#fff"/><circle cx="24" cy="24" r="4" fill="#1a8a4a"/></svg><span>Defence<b>India</b>.com</span></a>
+<nav class="nav" aria-label="Main"><a href="{{ site.baseurl }}/news/">News</a><a href="{{ site.baseurl }}/analysis/">Analysis</a><a href="{{ site.baseurl }}/forces/">Forces</a><a href="{{ site.baseurl }}/equipment/">Equipment</a><a href="{{ site.baseurl }}/careers/">Careers</a><a href="{{ site.baseurl }}/industry/">Industry</a><a href="{{ site.baseurl }}/videos/">Videos</a><a href="{{ site.baseurl }}/support/">Support</a><a class="cta" href="{{ site.baseurl }}/counselling/">Free Counselling</a></nav>
+<div class="hdr-actions"><a class="icon-btn" href="{{ site.baseurl }}/search/" aria-label="Search">🔍</a><button class="icon-btn theme-toggle" aria-label="Toggle dark mode">☾</button><button class="icon-btn menu" aria-label="Menu" aria-expanded="false">☰</button></div>
+</div>
+<nav class="mobile-nav" aria-label="Mobile"><a href="{{ site.baseurl }}/news/">News</a><a href="{{ site.baseurl }}/analysis/">Analysis</a><a href="{{ site.baseurl }}/forces/">Forces</a><a href="{{ site.baseurl }}/equipment/">Equipment</a><a href="{{ site.baseurl }}/careers/">Careers</a><a href="{{ site.baseurl }}/industry/">Industry</a><a href="{{ site.baseurl }}/videos/">Videos</a><a href="{{ site.baseurl }}/support/">Support</a><a href="{{ site.baseurl }}/india-vs/">India vs World</a><a href="{{ site.baseurl }}/advertise/">Advertise</a><a class="cta" href="{{ site.baseurl }}/counselling/">Free Career Counselling</a></nav>
+</header>
+<div class="ticker"><div class="container"><span class="tag">LATEST</span><div style="overflow:hidden;flex:1"><div class="ticker-track"><a href="{{ site.baseurl }}/analysis/theatre-commands-explained/">Theatre Commands — The Biggest Reform in Indian Military History, Explained</a><a href="{{ site.baseurl }}/news/agnipath-scheme-explained/">Agnipath Scheme Explained — Pay, Seva Nidhi, Retention and What Happens After Four Years</a><a href="{{ site.baseurl }}/news/india-defence-budget-explained/">India&#x27;s Defence Budget Explained — Where ₹6.8 Lakh Crore Actually Goes</a><a href="{{ site.baseurl }}/analysis/india-china-military-balance/">India vs China — A Sober Reading of the Military Balance</a><a href="{{ site.baseurl }}/news/tejas-mk1a-explained/">Tejas Mk1A — Why the IAF&#x27;s Smallest Fighter Is Its Most Important Programme</a><a href="{{ site.baseurl }}/news/ssb-interview-5-day-guide/">The SSB Interview Day-by-Day — What Actually Happens and How Candidates Get Screened Out</a><a href="{{ site.baseurl }}/news/make-in-india-defence-exports/">From ₹686 Crore to ₹21,000 Crore — How Indian Defence Exports Grew 30x in a Decade</a><a href="{{ site.baseurl }}/analysis/dap-2020-procurement-guide/">How India Buys Weapons — DAP 2020 From AoN to Contract, Step by Step</a></div></div></div></div>
+<main id="main">
+{{ content }}
+</main>
+<footer class="footer"><div class="container">
+<div class="grid grid-4">
+<div><a class="brand" href="{{ site.baseurl }}/"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#f2801e"/><path d="M24 8l14 7v10c0 9-6 15-14 18-8-3-14-9-14-18V15z" fill="#0b1f3a"/><path d="M24 14l9 4.5V25c0 6-4 10-9 12-5-2-9-6-9-12v-6.5z" fill="#fff"/><circle cx="24" cy="24" r="4" fill="#1a8a4a"/></svg><span>Defence<b>India</b>.com</span></a><p style="margin-top:12px">Independent news, analysis, careers guidance and industry intelligence on India's armed forces and defence sector.</p>
+<div class="social"><a data-link="social.x" href="#">X</a><a data-link="social.instagram" href="#">Instagram</a><a data-link="youtube.channelUrl" href="#">YouTube</a><a data-link="whatsappChannel" href="#">WhatsApp</a><a data-link="telegram" href="#">Telegram</a><a data-link="social.linkedin" href="#">LinkedIn</a></div></div>
+<div><h4>Sections</h4><ul><li><a href="{{ site.baseurl }}/news/">News</a></li><li><a href="{{ site.baseurl }}/analysis/">Analysis</a></li><li><a href="{{ site.baseurl }}/forces/">Forces</a></li><li><a href="{{ site.baseurl }}/equipment/">Equipment Database</a></li><li><a href="{{ site.baseurl }}/equipment/compare/">Compare Equipment</a></li><li><a href="{{ site.baseurl }}/india-vs/">India vs World</a></li><li><a href="{{ site.baseurl }}/videos/">Videos</a></li></ul></div><div><h4>Careers</h4><ul><li><a href="{{ site.baseurl }}/careers/">Careers Hub</a></li><li><a href="{{ site.baseurl }}/careers/eligibility-checker/">Eligibility Checker</a></li><li><a href="{{ site.baseurl }}/careers/exam-calendar/">Exam Calendar</a></li><li><a href="{{ site.baseurl }}/careers/salary-calculator/">Salary Calculator</a></li><li><a href="{{ site.baseurl }}/counselling/">Free Counselling</a></li><li><a href="{{ site.baseurl }}/news/ssb-interview-5-day-guide/">SSB Guide</a></li></ul></div><div><h4>Industry & Business</h4><ul><li><a href="{{ site.baseurl }}/industry/">Industry Hub</a></li><li><a href="{{ site.baseurl }}/industry/directory/">Vendor Directory</a></li><li><a href="{{ site.baseurl }}/industry/procurement-tracker/">Procurement Tracker</a></li><li><a href="{{ site.baseurl }}/vendor-enquiry/">Vendor / RFQ Enquiry</a></li><li><a href="{{ site.baseurl }}/advertise/">Advertise & Sponsor</a></li><li><a href="{{ site.baseurl }}/partner/">Partnerships</a></li></ul></div><div><h4>Community</h4><ul><li><a href="{{ site.baseurl }}/support/">Support Us</a></li><li><a href="{{ site.baseurl }}/contests/">Contests & Prizes</a></li><li><a href="{{ site.baseurl }}/join-us/">Join Our Team / Write for Us</a></li><li><a href="{{ site.baseurl }}/newsletter/">Newsletter</a></li><li><a href="{{ site.baseurl }}/about/">About</a></li><li><a href="{{ site.baseurl }}/contact/">Contact</a></li></ul></div>
+</div>
+<div class="legal">
+<p><b>Trademark &amp; copyright disclosure:</b> DefenceIndia.com is an independent, privately operated media and information website. It is <b>not</b> affiliated with, endorsed by, or connected to the Ministry of Defence, the Indian Army, Indian Navy, Indian Air Force, Indian Coast Guard, any Central Armed Police Force, the Government of India, or any organisation using a similar name. "Defence India" is used descriptively to denote the subject matter (India's defence sector) and not as a claim to any registered trademark. All official names, insignia, emblems and logos belong to their respective owners and are referenced for identification only. Any resemblance to other brands is unintentional; rights holders may <a href="https://web.works/contact" rel="noopener">contact us</a> for prompt review. Article content is © DefenceIndia.com unless stated; data tables compile publicly available figures and are indicative.</p>
+<p>Information on exams, pay and eligibility is compiled from public notifications and may change — always verify with the official notification. Nothing here is investment, legal or career advice. <a href="{{ site.baseurl }}/disclaimer/">Full disclaimer</a> · <a href="{{ site.baseurl }}/privacy/">Privacy</a> · <a href="{{ site.baseurl }}/terms/">Terms</a> · <a href="{{ site.baseurl }}/editorial-policy/">Editorial policy</a> · <a href="{{ site.baseurl }}/sitemap.xml">Sitemap</a></p>
+<p>© {{ site.time | date: "%Y" }} DefenceIndia.com. All rights reserved. <a href="https://web.works/contact" rel="noopener">This website / domain is available for sponsorship, advertising, partnership or acquisition enquiries.</a></p>
+</div>
+</div></footer>
+<a class="wa-float" data-link="whatsappChannel" href="#" rel="noopener" target="_blank">💬 Join WhatsApp</a>
+<a class="back-top btn btn-navy" href="#" aria-label="Back to top">↑</a>
+<div class="cookie" role="dialog" aria-label="Cookie notice">We use cookies for analytics and personalised ads. <a href="{{ site.baseurl }}/privacy/">Privacy policy</a> <button class="btn btn-primary" style="padding:6px 14px">OK</button></div>
+<script src="{{ site.baseurl }}/assets/js/config.js"></script>
+<script src="{{ site.baseurl }}/assets/js/main.js"></script>
+<script src="{{ site.baseurl }}/assets/js/tools.js"></script>
+</body></html>
