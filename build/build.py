@@ -75,6 +75,7 @@ def head(title, desc, path, extra_head="", og_type="website"):
 <meta property="og:url" content="{BASE}/{path}"><meta property="og:image" content="{BASE}/assets/img/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0b1f3a">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
 <link rel="icon" href="{R('assets/img/favicon.svg')}" type="image/svg+xml">
 <link rel="manifest" href="{R('manifest.webmanifest')}">
 <link rel="alternate" type="application/rss+xml" title="{SITE} RSS" href="{R('feed.xml')}">
@@ -190,7 +191,7 @@ def main():
     rss = f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{SITE}</title><link>{BASE}/</link><description>India defence news, careers and industry</description>' + "".join(f"<item><title>{esc(a['title'])}</title><link>{BASE}/{a['section']}/{a['slug']}/</link><description>{esc(a['summary'])}</description><pubDate>{a['date']}</pubDate></item>" for a in ALL_ARTICLES) + "</channel></rss>"
     open(os.path.join(OUT, "feed.xml"), "w", encoding="utf-8").write(rss)
     json.dump({"name": SITE, "short_name": "DefenceIndia", "start_url": ROOT, "display": "standalone", "background_color": "#0b1f3a", "theme_color": "#0b1f3a", "icons": [{"src": R("assets/img/favicon.svg"), "sizes": "any", "type": "image/svg+xml"}]}, open(os.path.join(OUT, "manifest.webmanifest"), "w"))
-    open(os.path.join(OUT, "ads.txt"), "w").write("# Replace with your AdSense line once approved, e.g.:\n# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0\n")
+    open(os.path.join(OUT, "ads.txt"), "w").write("google.com, pub-6620975821265271, DIRECT, f08c47fec0942fa0\n")
     open(os.path.join(OUT, ".nojekyll"), "w").write("")
     page("404.html", "Page not found", "The page you requested does not exist.", f'<div class="container section center"><h1>404 — Off the map</h1><p class="muted">That page does not exist or has moved.</p><div class="btn-group" style="justify-content:center"><a class="btn btn-primary" href="{R()}">Go home</a><a class="btn btn-outline" href="{R("search/")}">Search the site</a></div></div>')
     print(f"Built {len(URLS)} pages → {OUT} (root={ROOT})")
