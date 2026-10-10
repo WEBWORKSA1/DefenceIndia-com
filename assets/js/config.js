@@ -10,11 +10,16 @@ window.DI_CONFIG = {
      one-time activation email to the inbox; click it once and all forms deliver thereafter. */
   formEndpoint: "https://formsubmit.co/ajax/",
   /* Google AdSense — replace with your publisher ID once approved (also update ads.txt). */
-  adsense: { client: "ca-pub-0000000000000000", enabled: false, slots: { leaderboard: "1111111111", rect: "2222222222", inarticle: "3333333333" } },
+  adsense: { client: "ca-pub-6620975821265271", enabled: true,
+             /* Auto ads run site-wide from the script tag in the <head>. To pin manual units into the
+                leaderboard / rect / in-article containers, paste the slot IDs from AdSense here. */
+             slots: { leaderboard: "", rect: "", inarticle: "" } },
   /* Google Analytics 4 — set an ID (G-XXXXXXX) to enable. */
   ga4: "",
   /* YouTube: set a channel ID (starts with UC…) to auto-embed latest uploads; add featured video IDs. */
-  youtube: { channelId: "", featured: [] , channelUrl: "https://www.youtube.com/@DefenceIndia" },
+  youtube: { channelId: "", channelUrl: "https://www.youtube.com/@DefenceIndia",
+             /* Featured public videos (YouTube IDs). Replace/extend freely; first one shows on the home sidebar. */
+             featured: ["Z04EwxaIlb4", "NGsx6f1Md68", "JsupDHDedgE", "IIdCADwMaGY", "yPOICk2PU1M", "-1fdmdF9eSQ", "x3JtMBxhpNY", "rcC7rmmBLgc"] },
   /* Community channels shown in header / footer / floating button. */
   whatsappChannel: "https://whatsapp.com/channel/defenceindia",
   telegram: "https://t.me/defenceindia",
