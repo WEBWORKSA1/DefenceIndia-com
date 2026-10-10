@@ -159,10 +159,8 @@ p{margin:0 0 1em}
 .progress{position:fixed;top:0;left:0;height:3px;background:var(--saffron);width:0;z-index:60}
 
 /* Ad slots */
-.ad{background:repeating-linear-gradient(45deg,var(--surface-2),var(--surface-2) 10px,var(--surface) 10px,var(--surface) 20px);border:1px dashed var(--line);border-radius:10px;display:grid;place-items:center;color:var(--muted);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;margin:22px auto;min-height:100px;overflow:hidden}
-.ad.leaderboard{max-width:970px;min-height:90px}
-.ad.rect{min-height:250px}
-.ad.inarticle{min-height:120px}
+.ad{display:none;margin:22px auto;overflow:hidden;text-align:center;font-size:0;color:transparent}.ad.on{display:block}
+.ad.leaderboard{max-width:970px}
 .ad ins{display:block;width:100%}
 
 /* Forms */
