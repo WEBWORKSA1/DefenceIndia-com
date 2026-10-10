@@ -74,15 +74,16 @@
   });
 
   /* ---------- AdSense / GA4 loaders (config-gated) ---------- */
-  if (C.adsense && C.adsense.enabled && /^ca-pub-\d{10,}$/.test(C.adsense.client)) {
-    var s = document.createElement("script"); s.async = true; s.crossOrigin = "anonymous";
-    s.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=" + C.adsense.client; document.head.appendChild(s);
-    document.querySelectorAll(".ad[data-slot]").forEach(function (ad) {
-      var slot = C.adsense.slots[ad.getAttribute("data-slot")]; if (!slot) return;
-      ad.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="' + C.adsense.client + '" data-ad-slot="' + slot + '" data-ad-format="auto" data-full-width-responsive="true"></ins>';
-      (window.adsbygoogle = window.adsbygoogle || []).push({});
-    });
-  }
+  /* adsbygoogle.js is loaded from the <head> (Auto ads). Containers get a manual unit only when a slot ID
+     is configured; otherwise they are removed so no empty "ad" boxes are shown. */
+  document.querySelectorAll(".ad[data-slot]").forEach(function (ad) {
+    var on = C.adsense && C.adsense.enabled && /^ca-pub-\d{10,}$/.test(C.adsense.client);
+    var slot = on && C.adsense.slots ? C.adsense.slots[ad.getAttribute("data-slot")] : "";
+    if (!slot) { ad.remove(); return; }
+    ad.classList.add("on"); ad.removeAttribute("aria-label");
+    ad.innerHTML = '<ins class="adsbygoogle" style="display:block" data-ad-client="' + C.adsense.client + '" data-ad-slot="' + slot + '" data-ad-format="auto" data-full-width-responsive="true"></ins>';
+    (window.adsbygoogle = window.adsbygoogle || []).push({});
+  });
   if (C.ga4 && /^G-[A-Z0-9]+$/.test(C.ga4)) {
     var g = document.createElement("script"); g.async = true; g.src = "https://www.googletagmanager.com/gtag/js?id=" + C.ga4; document.head.appendChild(g);
     window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } window.gtag = gtag; gtag("js", new Date()); gtag("config", C.ga4);
@@ -93,8 +94,10 @@
   if (yt) {
     if (C.youtube && C.youtube.channelId && /^UC/.test(C.youtube.channelId)) {
       yt.innerHTML = '<iframe loading="lazy" src="https://www.youtube.com/embed/videoseries?list=UU' + C.youtube.channelId.slice(2) + '" title="Latest videos" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    } else if (C.youtube && C.youtube.featured && C.youtube.featured.length) {
+      yt.innerHTML = '<iframe loading="lazy" src="https://www.youtube.com/embed/' + C.youtube.featured[0] + '" title="Featured video" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
     } else {
-      yt.innerHTML = '<div style="display:grid;place-items:center;height:100%;color:#fff;padding:20px;text-align:center"><div><b>Channel launching soon.</b><br><small>Set <code>youtube.channelId</code> in config.js to auto-embed latest uploads.</small></div></div>';
+      yt.innerHTML = '<div style="display:grid;place-items:center;height:100%;color:#fff;padding:20px;text-align:center"><div><b>Channel launching soon.</b></div></div>';
     }
   }
   var ytf = document.querySelector("[data-youtube-featured]");
